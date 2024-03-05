@@ -15,21 +15,44 @@ bool isLightOn = true;          // Boolean ist in Programmiersprachen der Datent
 string name = "HTK Academy";    // Ein “string” ist ein Datentyp in der Programmierung, der eine Zeichenkette enthält. Zeichenketten werden verwendet, um Wörter, Sätze und Texte zu speichern.
 float price = 0.99f;            // Gleitkommazahl, Datentyp zum Speichern von Kommazahlen.
 
+
 // Zusätzliche Datentypen
 
 double reallyBigNumber = 99;    //Ein Double enthält doppelt so viele Bits wie eine normale Gleitkommazahl (float). Ein Double kann 64 Bit enthalten und positiv (+) oder negativ (-) sein. Wird aber selten verwendet.
 
-// Start des Programmes
+//  Funktionen Aufrufe
 
-Say(age.ToString());
-Say(isLightOn.ToString());
-Say(name);
-Say(price.ToString());
-Say(reallyBigNumber.ToString());
+/* Um eine Funktion aufzurufen:
+ * FunktionsName(Mitgegebene Variable1, Mitgegebene Variable2, ...);
+ *
+ * In unserem Fall:
+ * Say(Variable);
+ *
+ * Variable sollte in unserem Fall dem Datentyp string entsprechen, dazu weiter unten
+ * Beispiele bzw. erklärung zu den Schreibweisen weiter unten.
+ *
+ * Say(age); funktioniert nicht, da age ein INT ist und kein String.
+ * deswegen: 
+ */
+
+
+int example = 42;                                           // Mann kann das auch hier initialisieren, jedoch ist dies nicht "schön" nur so machen wenn man weiß was man macht. 
+Say(example.ToString());                            //.ToString() wandelt die Variable in das Format String um, damit dieser auch als Text ausgegeben werden kann.
+
+
+Say("Integer: " + age);                             // Hier ist eine Kombination aus Roher information und einer Variable. In diesem Falle, ist es nicht notwendig .toString() hinzuzufügen
+
+Say( "Boolean: " + isLightOn);                      // "xxxx" ist eine andere art der Dateneingabe. Hier wird der String direkt mithilfe von "" eingegeben.
+
+Say("String: " + name);                             // Das "+" hängt die Texte zusammen
+
+Say("Float: " + price);           
+
+Say("Double: " + reallyBigNumber);
 
 
 
-// Funktionen
+//  Funktion Definitionen
 
 
 /*
