@@ -16,9 +16,15 @@ string name = "HTK Academy";    // Ein “string” ist ein Datentyp in der Prog
 float price = 0.99f;            // Gleitkommazahl, Datentyp zum Speichern von Kommazahlen.
 
 
+
 // Zusätzliche Datentypen
 
 double reallyBigNumber = 99;    //Ein Double enthält doppelt so viele Bits wie eine normale Gleitkommazahl (float). Ein Double kann 64 Bit enthalten und positiv (+) oder negativ (-) sein. Wird aber selten verwendet.
+
+
+//übungs Variablen
+int a, b;
+
 
 //  Funktionen Aufrufe
 
@@ -51,19 +57,71 @@ Say("Float: " + price);
 Say("Double: " + reallyBigNumber);
 
 
+//------------------------------------------------------------ 
+//Übung:
+
+a = 10;                 //Hier wird der Wert 5 in die Variable a gespeichert
+b = 5;                 //Hier wird der Wert 8 in die Variable b gespeichert
+
+AddInts(a,b);          //hier wird die Funktion AddInts aufgerufen und es werden die Variablen a & b weitergegeben
+SubtractInts(a,b);
+MultiplayInts(a, b);
+DivideInts(a,b);
+
 
 //  Funktion Definitionen
 
 
-/*
- * @ToDo Das ist eine Möglichkeit um darzustellen was noch gemacht gehört
+/*@ToDo Das ist eine Möglichkeit um darzustellen was noch gemacht gehört
  *
  * Die Funktion Say soll einen Text in der Konsole ausgeben
  *
  * @param message Text der in der Konsole ausgegeben werden soll.
  */
+
 void Say(string message)
 {
     Console.WriteLine(message);
 }
+
+
+// --------------- Übungsfunktionen
+
+
+/* Die Funktion Say soll zwei Integer miteinander addieren und ruft Say auf.
+ *
+ * @param number1, number2 Wert der Zahlen
+ */
+void AddInts(int number1, int number2)
+{
+  Say("Das Ergebnis der Addition lautet: " + (number1 + number2));
+}
+
+/* Die Funktion Say soll zwei Integer miteinander subtrahieren und ruft Say auf.
+ *
+ * @param number1, number2 Wert der Zahlen
+ */
+void SubtractInts(int number1, int number2)
+{
+ Say("Das Ergebnis der Subtraction lautet: " + (number1 - number2));
+}
+
+/* Die Funktion Say soll zwei Integer miteinander multiplizieren und ruft Say auf.
+ *
+ * @param number1, number2 Wert der Zahlen
+ */
+void MultiplayInts(int number1, int number2)
+{
+ Say("Das Ergebnis der Multiplikation lautet: " + (number1 * number2));
+}
+
+/* Die Funktion Say soll zwei Integer miteinander teilen und ruft Say auf.
+ *
+ * @param number1, number2 Wert der Zahlen
+ */
+void DivideInts(int number1, int number2)
+{
+ Say("Das Ergebnis der Division lautet: " + (number1 / number2));
+}
+
 
