@@ -10,6 +10,8 @@
 
 //  Definition Variablen      
 
+// ReSharper disable All
+
 int
     age = 10; // int Die Werte des Datentyps "int" sind die ganzen Zahlen im Bereich von "-2147483648" bis "2147483647". (Die größte und kleinste Zahl des Datentyps "int" ist die Konstante "Integer.
 bool
@@ -23,12 +25,16 @@ float price = 0.99f; // Gleitkommazahl, Datentyp zum Speichern von Kommazahlen.
 
 double
     reallyBigNumber =
-        99; //Ein Double enthält doppelt so viele Bits wie eine normale Gleitkommazahl (float). Ein Double kann 64 Bit enthalten und positiv (+) oder negativ (-) sein. Wird aber selten verwendet.
+        0.99f; //Ein Double enthält doppelt so viele Bits wie eine normale Gleitkommazahl (float). Ein Double kann 64 Bit enthalten und positiv (+) oder negativ (-) sein. Wird aber selten verwendet.
 
 
 //übungs Variablen
-int a, b;
+int a, b, c;
+float x, y, z;
 int balance;
+int currentYear, birthyear;
+
+//Hausübungs Variablen
 
 
 //  Funktionen Aufrufe
@@ -88,7 +94,28 @@ Rich(150); //Schreibweise möglich, aber unüblich (Nebeneinander, getrennt mit 
 
 //------------------------------------------------------------ 
 //Übung:
+a = 19;
+b = 23;
+c = 99;
+
 HightestNumOfTwo(a, b);
+HightestNumOfThree(a, b, c);
+
+//------------------------------------------------------------ 
+//Übung:
+a = 3;
+b = 42;
+x = 48f;
+y = 162f;
+z = 0.15f;
+
+currentYear = 2024;
+birthyear = 2002;
+
+Aufgabe1(x);
+Aufgabe2(y, z);
+Aufgabe3(a, b);
+Aufgabe4(currentYear, birthyear);
 
 
 //  Funktion Definitionen
@@ -186,6 +213,75 @@ void HightestNumOfTwo(int number1, int number2)
     }
     else
     {
-        Say("Die Zahlen" + number1 + " " + number2 + " sind gleich groß");
+        Say("Die Zahlen " + number1 + " " + number2 + " sind gleich groß");
     }
+}
+
+/* Die Funktion HightestNumOfThree soll drei Integer miteinander vergleichen, nimmt die höchste Zahl und ruft Say auf.
+ *
+ * @param number1, number2, number3 Wert der Zahlen
+ */
+void HightestNumOfThree(int number1, int number2, int number3)
+{
+    if (number1 > number2 &&
+        number1 > number3) // && bedeutet das die abfrage links und rechts wahr sein müssen, ansonsten gibt die abfrage ein false aus. Eine alternative wäre ||. Die sagt aus, das nur eine Wahr sein muss. (Es können beide auch wahr sein)
+    {
+        Say("Die Größere Zahl von den drei ist: " + number1);
+    }
+    else if (number2 > number1 && number2 > number3)
+    {
+        Say("Die Größere Zahl von den drei ist: " + number2);
+    }
+    else if (number3 > number1 && number3 > number2)
+    {
+        Say("Die Größere Zahl von den drei ist: " + number3);
+    }
+    else
+    {
+        Say("Die Zahlen" + number1 + " " + number2 + " " + number3 + " sind gleich groß");
+    }
+}
+
+
+/* Hausübung
+ * @ToDo Schreibe in die Konsole: die Hälfte einer Zahl (float Ergebnis | eine Zahl erwartet) | z.B. von 48
+ *
+ * @ToDo Schreibe in die Konsole: die Menge einer Prozentangabe (float Ergebnis | 2 Zahlen erwartet) | z.B. 15% von 162
+ *
+ * @ToDo Schreibe in die Konsole, welcher von zwei Spielern gewonnen hat (string Ergebnis | Score 1 + Score 2 erwartet) | z.B. 3, 42
+ *
+ * @ToDo Schreibe in die Konsole: Alter von Person (int Ergebnis | aktuelles Jahr & Geburtsjahr erwartet) | z.B. euer Alter
+ *
+ */
+
+void Aufgabe1(float number)
+{
+    Say("Das Ergebnis der ersten Aufgabe mit der Zahl " + number + " lautet: " + number / 2);
+}
+
+void Aufgabe2(float number, float percent)
+{
+    Say("Das Ergebnis der zweiten Aufgabe mit der Zahl " + number + " und " + (int)(percent * 100) + "% lautet: " +
+        (float)((int)(number * percent * 100)) / 100); // Das hier ist nicht die Beste Methode
+}
+
+void Aufgabe3(int number1, int number2)
+{
+    if (number1 > number2)
+    {
+        Say("Spieler 1 hat mit " + number1 + ":" + number2 + " Gewonnen");
+    }
+    else if (number2 > number1)
+    {
+        Say("Spieler 2 hat mit " + number2 + ":" + number1 + " Gewonnen");
+    }
+    else
+    {
+        Say("Beide Spieler haben gleich viel Punkte");
+    }
+}
+
+void Aufgabe4(int currentYear, int yourBirthday)
+{
+    Say("Dein Alter ist ca. " + (currentYear - birthyear));
 }
