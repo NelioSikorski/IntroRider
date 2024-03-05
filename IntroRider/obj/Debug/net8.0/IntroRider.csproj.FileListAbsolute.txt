@@ -1,0 +1,15 @@
+E:\JetBrainsProject\IntroRider\IntroRider\bin\Debug\net8.0\IntroRider.exe
+E:\JetBrainsProject\IntroRider\IntroRider\bin\Debug\net8.0\IntroRider.deps.json
+E:\JetBrainsProject\IntroRider\IntroRider\bin\Debug\net8.0\IntroRider.runtimeconfig.json
+E:\JetBrainsProject\IntroRider\IntroRider\bin\Debug\net8.0\IntroRider.dll
+E:\JetBrainsProject\IntroRider\IntroRider\bin\Debug\net8.0\IntroRider.pdb
+E:\JetBrainsProject\IntroRider\IntroRider\obj\Debug\net8.0\IntroRider.GeneratedMSBuildEditorConfig.editorconfig
+E:\JetBrainsProject\IntroRider\IntroRider\obj\Debug\net8.0\IntroRider.AssemblyInfoInputs.cache
+E:\JetBrainsProject\IntroRider\IntroRider\obj\Debug\net8.0\IntroRider.AssemblyInfo.cs
+E:\JetBrainsProject\IntroRider\IntroRider\obj\Debug\net8.0\IntroRider.csproj.CoreCompileInputs.cache
+E:\JetBrainsProject\IntroRider\IntroRider\obj\Debug\net8.0\IntroRider.sourcelink.json
+E:\JetBrainsProject\IntroRider\IntroRider\obj\Debug\net8.0\IntroRider.dll
+E:\JetBrainsProject\IntroRider\IntroRider\obj\Debug\net8.0\refint\IntroRider.dll
+E:\JetBrainsProject\IntroRider\IntroRider\obj\Debug\net8.0\IntroRider.pdb
+E:\JetBrainsProject\IntroRider\IntroRider\obj\Debug\net8.0\IntroRider.genruntimeconfig.cache
+E:\JetBrainsProject\IntroRider\IntroRider\obj\Debug\net8.0\ref\IntroRider.dll
