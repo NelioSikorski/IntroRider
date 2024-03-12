@@ -29,10 +29,9 @@ double
 
 
 //übungs Variablen
-int a, b, c;
+int a, b, c, balance, currentYear, birthyear;
 float x, y, z;
-int balance;
-int currentYear, birthyear;
+bool hadBirthday;
 
 //Hausübungs Variablen
 
@@ -111,11 +110,13 @@ z = 0.15f;
 
 currentYear = 2024;
 birthyear = 2002;
+hadBirthday = false;
+
 
 Aufgabe1(x);
 Aufgabe2(y, z);
 Aufgabe3(a, b);
-Aufgabe4(currentYear, birthyear);
+Aufgabe4(currentYear, birthyear, hadBirthday);
 
 
 //  Funktion Definitionen
@@ -243,28 +244,32 @@ void HightestNumOfThree(int number1, int number2, int number3)
 }
 
 
-/* Hausübung
- * @ToDo Schreibe in die Konsole: die Hälfte einer Zahl (float Ergebnis | eine Zahl erwartet) | z.B. von 48
- *
- * @ToDo Schreibe in die Konsole: die Menge einer Prozentangabe (float Ergebnis | 2 Zahlen erwartet) | z.B. 15% von 162
- *
- * @ToDo Schreibe in die Konsole, welcher von zwei Spielern gewonnen hat (string Ergebnis | Score 1 + Score 2 erwartet) | z.B. 3, 42
- *
- * @ToDo Schreibe in die Konsole: Alter von Person (int Ergebnis | aktuelles Jahr & Geburtsjahr erwartet) | z.B. euer Alter
- *
- */
+// Hausübung -----------------------------------------------------------------------
 
+/* @ToDo Schreibe in die Konsole: die Hälfte einer Zahl (float Ergebnis | eine Zahl erwartet) | z.B. von 48
+ *
+ * @param number Weitergegebene Zahl
+ */
 void Aufgabe1(float number)
 {
     Say("Das Ergebnis der ersten Aufgabe mit der Zahl " + number + " lautet: " + number / 2);
 }
 
+/* @ToDo Schreibe in die Konsole: die Menge einer Prozentangabe (float Ergebnis | 2 Zahlen erwartet) | z.B. 15% von 162
+ *
+ * @param number Weitergegebene Zahl
+ * @param percent %
+ */
 void Aufgabe2(float number, float percent)
 {
     Say("Das Ergebnis der zweiten Aufgabe mit der Zahl " + number + " und " + (int)(percent * 100) + "% lautet: " +
         (float)((int)(number * percent * 100)) / 100); // Das hier ist nicht die Beste Methode
 }
 
+/* @ToDo Schreibe in die Konsole, welcher von zwei Spielern gewonnen hat (string Ergebnis | Score 1 + Score 2 erwartet) | z.B. 3, 42
+ *
+ * @param number1, number2 Weitergegebene Zahl
+ */
 void Aufgabe3(int number1, int number2)
 {
     if (number1 > number2)
@@ -281,7 +286,19 @@ void Aufgabe3(int number1, int number2)
     }
 }
 
-void Aufgabe4(int currentYear, int yourBirthday)
+/* @ToDo Schreibe in die Konsole: Alter von Person (int Ergebnis | aktuelles Jahr & Geburtsjahr erwartet) | z.B. euer Alter
+ *
+ * @param currentYear Das aktuelle Jahr
+ * @param yourBirthday Dein Geburtsjahr
+ */
+void Aufgabe4(int currentYear, int yourBirthyear, bool hadBirthday)
 {
-    Say("Dein Alter ist ca. " + (currentYear - birthyear));
+    if (hadBirthday)
+    {
+        Say("Dein Alter ist " + (currentYear - yourBirthyear));
+    }
+    else
+    {
+        Say("Dein Alter ist " + (currentYear - yourBirthyear - 1 ));
+    }
 }
